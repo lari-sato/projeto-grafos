@@ -1,0 +1,412 @@
+3
+200
+"Jabaquara" "E" "azul"
+"Conceição" "E" "azul"
+"São Judas" "E" "azul"
+"Saúde" "E" "azul"
+"Praça da Árvore" "E" "azul"
+"Santa Cruz" "E" "azul"
+"Vila Mariana" "E" "azul"
+"Ana Rosa" "E" "azul"
+"Paraíso" "E" "azul"
+"Vergueiro" "E" "azul"
+"São Joaquim" "E" "azul"
+"Japão - Liberdade" "E" "azul"
+"Sé" "E" "azul"
+"São Bento" "E" "azul"
+"Luz" "E" "azul"
+"Tiradentes" "E" "azul"
+"Armênia" "E" "azul"
+"Portuguesa - Tietê" "E" "azul"
+"Carandiru" "E" "azul"
+"Santana" "E" "azul"
+"Jardim São Paulo" "E" "azul"
+"Parada Inglesa" "E" "azul"
+"Tucuruvi" "E" "azul"
+"Hospital Municipal Dr. Arthur Ribeiro de Saboya" "H" "geral"
+"Palmeiras - Barra Funda" "E" "vermelha"
+"Júlio Prestes" "E" "diamante"
+"Água Branca" "E" "rubi"
+"Lapa" "E" "rubi"
+"Piqueiri" "E" "rubi"
+"Pirituba" "E" "rubi"
+"Vila Clarice" "E" "rubi"
+"Jaraguá" "E" "rubi"
+"Vila Aurora" "E" "rubi"
+"Perus" "E" "rubi"
+"Caieiras" "E" "rubi"
+"Franco da Rocha" "E" "rubi"
+"Baltazar Fidélis" "E" "rubi"
+"Francisco Morato" "E" "rubi"
+"Botujuru" "E" "rubi"
+"Campo Limpo Paulista" "E" "rubi"
+"Várzea Paulista" "E" "rubi"
+"Jundiaí" "E" "rubi"
+"Brás" "E" "vermelha"
+"Tatuapé" "E" "vermelha"
+"Engº Goulart" "E" "safira"
+"USP Leste" "E" "safira"
+"Comendador Ermelino" "E" "safira"
+"São Miguel Paulista" "E" "safira"
+"Jd. Helena - Vila Mara" "E" "safira"
+"Itaim Paulista" "E" "safira"
+"Jardim Romano" "E" "safira"
+"Engº Manoel Feio" "E" "safira"
+"Itaquaquecetuba" "E" "safira"
+"Aracaré" "E" "safira"
+"Calmon Viana" "E" "safira"
+"Anhangabaú" "E" "vermelha"
+"República" "E" "vermelha"
+"Santa Cecília" "E" "vermelha"
+"Mal. Deodoro" "E" "vermelha"
+"Lapa - Senac" "E" "rubi"
+"Higienópolis - Mackenzie" "E" "amarela"
+"Paulista" "E" "amarela"
+"Oscar Freire" "E" "amarela"
+"Consolação" "E" "verde"
+"Trianon - MASP" "E" "verde"
+"Brigadeiro" "E" "verde"
+"Chácara Klabin" "E" "verde"
+"Santos - Imigrantes" "E" "verde"
+"Alto do Ipiranga" "E" "verde"
+"Sacomã" "E" "verde"
+"Tamanduateí" "E" "verde"
+"Vila Prudente" "E" "verde"
+"Pedro II" "E" "vermelha"
+"Bresser - Mooca" "E" "vermelha"
+"Belém" "E" "vermelha"
+"Carrão" "E" "vermelha"
+"Penha" "E" "vermelha"
+"Vila Matilde" "E" "vermelha"
+"Guilhermina - Esperança" "E" "vermelha"
+"Patriarca - Vila Ré" "E" "vermelha"
+"Arthur Alvim" "E" "vermelha"
+"Corinthians - Itaquera" "E" "vermelha"
+"Clínicas" "E" "verde"
+"Sumaré" "E" "verde"
+"Vila Madalena" "E" "verde"
+"Fradique Coutinho" "E" "amarela"
+"Faria Lima" "E" "amarela"
+"Pinheiros" "E" "amarela"
+"Butantã" "E" "amarela"
+"São Paulo - Morumbi" "E" "amarela"
+"Vila Sônia" "E" "amarela"
+"Hospital São Paulo" "H" "universitario geral"
+"AACD - Servidor" "E" "lilas"
+"Moema" "E" "lilas"
+"Eucaliptos" "E" "lilas"
+"Campo Belo" "E" "lilas"
+"Brooklin" "E" "lilas"
+"Borba Gato" "E" "lilas"
+"Alto da Boa Vista" "E" "lilas"
+"Adolfo Pinheiro" "E" "lilas"
+"Largo Treze" "E" "lilas"
+"Santo Amaro" "E" "lilas"
+"Giovanni Gronchi" "E" "lilas"
+"Vila das Belezas" "E" "lilas"
+"Campo Limpo" "E" "lilas"
+"Capão Redondo" "E" "lilas"
+"Juventus - Mooca" "E" "turquesa"
+"Ipiranga" "E" "turquesa"
+"São Caetano do Sul" "E" "turquesa"
+"Utinga" "E" "turquesa"
+"Prefeito Saladino" "E" "turquesa"
+"Santo André" "E" "turquesa"
+"Capuava" "E" "turquesa"
+"Mauá" "E" "turquesa"
+"Guapituba" "E" "turquesa"
+"Ribeirão Pires" "E" "turquesa"
+"Rio Grande da Serra" "E" "turquesa"
+"Oratório" "E" "prata"
+"São Lucas" "E" "prata"
+"Camilo Haddad" "E" "prata"
+"Vila Tolstói" "E" "prata"
+"Vila União" "E" "prata"
+"Jd. Planalto" "E" "prata"
+"Sapopemba" "E" "prata"
+"Fazenda da Juta" "E" "prata"
+"São Mateus" "E" "prata"
+"Jd. Colonial" "E" "prata"
+"Hebraica - Rebouças" "E" "esmeralda"
+"Cidade Jardim" "E" "esmeralda"
+"Vila Olímpia" "E" "esmeralda"
+"Berrini" "E" "esmeralda"
+"Morumbi" "E" "esmeralda"
+"Granja Julieta" "E" "esmeralda"
+"João Dias" "E" "esmeralda"
+"Socorro" "E" "esmeralda"
+"Jurubatuba" "E" "esmeralda"
+"Autódromo" "E" "esmeralda"
+"Primavera - Interlagos" "E" "esmeralda"
+"Grajaú" "E" "esmeralda"
+"Mendes - Vila Natal" "E" "esmeralda"
+"Varginha" "E" "esmeralda"
+"Cidade Universitária" "E" "esmeralda"
+"Vila Lobos - Jaguaré" "E" "esmeralda"
+"Ceasa" "E" "esmeralda"
+"Pres. Altino" "E" "diamante"
+"Osasco" "E" "diamante"
+"Domingos de Moraes" "E" "diamante"
+"Imperatriz Leopoldina" "E" "diamante"
+"Com. Sampaio" "E" "diamante"
+"Quitaúna" "E" "diamante"
+"Gen. Miguel Costa" "E" "diamante"
+"Carapicuíba" "E" "diamante"
+"Antonio João" "E" "diamante"
+"Barueri" "E" "diamante"
+"Jd. Belval" "E" "diamante"
+"Jd. Silveira" "E" "diamante"
+"Jandira" "E" "diamante"
+"Sagrado Coração" "E" "diamante"
+"Engº Cardoso" "E" "diamante"
+"Itapevi" "E" "diamante"
+"Santa Terezinha" "E" "diamante"
+"Dom Bosco" "E" "coral"
+"José Bonifácio" "E" "coral"
+"Guianases" "E" "coral"
+"Antonio Gianetti Neto" "E" "coral"
+"Ferraz de Vasconcelos" "E" "coral"
+"Poá" "E" "coral"
+"Suzano" "E" "coral"
+"Jundiapeba" "E" "coral"
+"Braz Cubas" "E" "coral"
+"Mogi das Cruzes" "E" "coral"
+"Estudantes" "E" "coral"
+"Guarulhos - Cecap" "E" "jade"
+"Aeroporto - Guarulhos" "E" "jade"
+"Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo " "H" "geral"
+"Hospital Mun. Prof. Dr. Waldomiro de Paula" "H" "geral"
+"Hospital Municipal Tide Setubal - São Miguel" "H" "geral"
+"Hospital Maternidade De Vila Nova Cachoeirinha" "H" "maternidade"
+"Hospital Municipal Dr José Soares Hungria - Pirituba" "H" "geral"
+"Hospital Municipal e Maternidade Prof. Mario Degni" "H" "maternidade"
+"Hospital Municipal Dr. Ignácio Proença de Gouvêa" "H" "geral"
+"Hospital Municipal do Tatuapé - Dr. Cármino Caricchio" "H" "geral"
+"Hospital Municipal Doutor Alexandre Zaio" "H" "geral"
+"Hospital Municipal Dr. Benedicto Montenegro" "H" "geral"
+"Hospital Mun. do Campo Limpo Dr. Fernando Mauro Pires da Rocha Pronto Atendimento" "H" "pronto atendimento"
+"Hospital Municipal da Bela Vista - Santa Dulce dos Pobres" "H" "geral"
+"Hospital Municipal Infantil Menino Jesus" "H" "pediatria"
+"Hospital Municipal Cidade Tiradentes" "H" "geral"
+"Hospital Municipal de Brasilândia Adib Jatene" "H" "geral"
+"Hospital Mun. Ver. José Storopolli" "H" "geral"
+"Hospital Municipal Sorocabana" "H" "geral"
+"Hospital Municipal Capela do Socorro" "H" "geral"
+"Hospital M'Boi Mirim" "H" "geral"
+"Hospital Municipal de Guarapiranga" "H" "geral"
+"Hospital Municipal Josanias Castanha Braga - Parelheiros" "H" "geral"
+"Hospital Municipal Gilson de Cássia Marques de Carvalho" "H" "geral"
+"Hospital São Luíz Gonzaga São Paulo" "H" "geral"
+"Hospital Cantareira" "H" "geral"
+"Hospital Amparo Maternal" "H" "geral"
+"Hospital do Servidor Público Municipal de São Paulo" "H" "geral"
+209
+"Conceição" "Jabaquara" 2
+"Conceição" "São Judas" 2
+"Saúde" "São Judas" 2
+"Praça da Árvore" "Saúde" 2
+"Praça da Árvore" "Santa Cruz" 2
+"Santa Cruz" "Vila Mariana" 2
+"Ana Rosa" "Vila Mariana" 2
+"Ana Rosa" "Paraíso" 2
+"Paraíso" "Vergueiro" 2
+"São Joaquim" "Vergueiro" 2
+"Japão - Liberdade" "São Joaquim" 2
+"São Bento" "Sé" 2
+"Japão - Liberdade" "Sé" 2
+"Luz" "São Bento" 2
+"Luz" "Tiradentes" 2
+"Armênia" "Tiradentes" 2
+"Armênia" "Portuguesa - Tietê" 2
+"Carandiru" "Portuguesa - Tietê" 2
+"Carandiru" "Santana" 2
+"Jardim São Paulo" "Santana" 2
+"Jardim São Paulo" "Parada Inglesa" 2
+"Parada Inglesa" "Tucuruvi" 2
+"Hospital Cantareira" "Tucuruvi" 23
+"Hospital Municipal Dr. Arthur Ribeiro de Saboya" "Jabaquara" 12
+"Luz" "Palmeiras - Barra Funda" 2
+"Júlio Prestes" "Palmeiras - Barra Funda" 2
+"Palmeiras - Barra Funda" "Água Branca" 4
+"Lapa" "Água Branca" 4
+"Lapa" "Piqueiri" 4
+"Piqueiri" "Pirituba" 4
+"Pirituba" "Vila Clarice" 4
+"Jaraguá" "Vila Clarice" 4
+"Jaraguá" "Vila Aurora" 4
+"Perus" "Vila Aurora" 4
+"Caieiras" "Perus" 4
+"Caieiras" "Franco da Rocha" 4
+"Baltazar Fidélis" "Franco da Rocha" 4
+"Baltazar Fidélis" "Francisco Morato" 4
+"Botujuru" "Francisco Morato" 4
+"Botujuru" "Campo Limpo Paulista" 4
+"Campo Limpo Paulista" "Várzea Paulista" 4
+"Jundiaí" "Várzea Paulista" 4
+"Brás" "Luz" 4
+"Brás" "Tatuapé" 4
+"Engº Goulart" "Tatuapé" 4
+"Engº Goulart" "USP Leste" 4
+"Comendador Ermelino" "USP Leste" 4
+"Comendador Ermelino" "São Miguel Paulista" 4
+"Jd. Helena - Vila Mara" "São Miguel Paulista" 4
+"Itaim Paulista" "Jd. Helena - Vila Mara" 4
+"Itaim Paulista" "Jardim Romano" 4
+"Engº Manoel Feio" "Jardim Romano" 4
+"Engº Manoel Feio" "Itaquaquecetuba" 4
+"Aracaré" "Itaquaquecetuba" 4
+"Aracaré" "Calmon Viana" 4
+"Luz" "República" 2
+"Anhangabaú" "Sé" 2
+"Anhangabaú" "República" 2
+"República" "Santa Cecília" 2
+"Mal. Deodoro" "Santa Cecília" 2
+"Mal. Deodoro" "Palmeiras - Barra Funda" 2
+"Lapa - Senac" "Palmeiras - Barra Funda" 4
+"Higienópolis - Mackenzie" "República" 2
+"Higienópolis - Mackenzie" "Paulista" 2
+"Oscar Freire" "Paulista" 2
+"Consolação" "Paulista" 2
+"Consolação" "Trianon - MASP" 2
+"Brigadeiro" "Trianon - MASP" 2
+"Brigadeiro" "Paraíso" 2
+"Chácara Klabin" "Santa Cruz" 2
+"Ana Rosa" "Chácara Klabin" 2
+"Chácara Klabin" "Santos - Imigrantes" 2
+"Alto do Ipiranga" "Santos - Imigrantes" 2
+"Alto do Ipiranga" "Sacomã" 2
+"Sacomã" "Tamanduateí" 2
+"Tamanduateí" "Vila Prudente" 2
+"Pedro II" "Sé" 2
+"Brás" "Pedro II" 2
+"Belém" "Tatuapé" 2
+"Belém" "Bresser - Mooca" 2
+"Bresser - Mooca" "Brás" 2
+"Carrão" "Tatuapé" 2
+"Carrão" "Penha" 2
+"Penha" "Vila Matilde" 2
+"Guilhermina - Esperança" "Vila Matilde" 2
+"Guilhermina - Esperança" "Patriarca - Vila Ré" 2
+"Arthur Alvim" "Patriarca - Vila Ré" 2
+"Arthur Alvim" "Corinthians - Itaquera" 2
+"Clínicas" "Consolação" 2
+"Clínicas" "Sumaré" 2
+"Sumaré" "Vila Madalena" 2
+"Fradique Coutinho" "Oscar Freire" 2
+"Faria Lima" "Fradique Coutinho" 2
+"Faria Lima" "Pinheiros" 2
+"Butantã" "Pinheiros" 2
+"Butantã" "São Paulo - Morumbi" 2
+"São Paulo - Morumbi" "Vila Sônia" 2
+"Hospital São Paulo" "Santa Cruz" 2
+"AACD - Servidor" "Hospital São Paulo" 2
+"AACD - Servidor" "Moema" 2
+"Eucaliptos" "Moema" 2
+"Campo Belo" "Eucaliptos" 2
+"Brooklin" "Campo Belo" 2
+"Borba Gato" "Brooklin" 2
+"Alto da Boa Vista" "Borba Gato" 2
+"Adolfo Pinheiro" "Alto da Boa Vista" 2
+"Adolfo Pinheiro" "Largo Treze" 2
+"Largo Treze" "Santo Amaro" 2
+"Giovanni Gronchi" "Santo Amaro" 2
+"Campo Limpo" "Vila das Belezas" 2
+"Campo Limpo" "Capão Redondo" 2
+"Giovanni Gronchi" "Vila das Belezas" 2
+"Brás" "Juventus - Mooca" 4
+"Ipiranga" "Juventus - Mooca" 4
+"Ipiranga" "Tamanduateí" 4
+"São Caetano do Sul" "Tamanduateí" 4
+"São Caetano do Sul" "Utinga" 4
+"Prefeito Saladino" "Utinga" 4
+"Prefeito Saladino" "Santo André" 4
+"Capuava" "Santo André" 4
+"Capuava" "Mauá" 4
+"Guapituba" "Mauá" 4
+"Guapituba" "Ribeirão Pires" 4
+"Ribeirão Pires" "Rio Grande da Serra" 4
+"Oratório" "Vila Prudente" 4
+"Oratório" "São Lucas" 4
+"Camilo Haddad" "São Lucas" 4
+"Camilo Haddad" "Vila Tolstói" 4
+"Vila Tolstói" "Vila União" 4
+"Jd. Planalto" "Vila União" 4
+"Jd. Planalto" "Sapopemba" 4
+"Fazenda da Juta" "Sapopemba" 4
+"Fazenda da Juta" "São Mateus" 4
+"Jd. Colonial" "São Mateus" 4
+"Hebraica - Rebouças" "Pinheiros" 2
+"Cidade Jardim" "Hebraica - Rebouças" 2
+"Cidade Jardim" "Vila Olímpia" 2
+"Berrini" "Vila Olímpia" 2
+"Berrini" "Morumbi" 2
+"Granja Julieta" "Morumbi" 2
+"Granja Julieta" "João Dias" 2
+"João Dias" "Santo Amaro" 2
+"Santo Amaro" "Socorro" 2
+"Jurubatuba" "Socorro" 2
+"Autódromo" "Jurubatuba" 2
+"Autódromo" "Primavera - Interlagos" 2
+"Grajaú" "Primavera - Interlagos" 2
+"Grajaú" "Mendes - Vila Natal" 2
+"Mendes - Vila Natal" "Varginha" 2
+"Cidade Universitária" "Pinheiros" 2
+"Cidade Universitária" "Vila Lobos - Jaguaré" 2
+"Ceasa" "Vila Lobos - Jaguaré" 2
+"Ceasa" "Pres. Altino" 2
+"Osasco" "Pres. Altino" 2
+"Domingos de Moraes" "Lapa - Senac" 4
+"Domingos de Moraes" "Imperatriz Leopoldina" 4
+"Imperatriz Leopoldina" "Pres. Altino" 4
+"Com. Sampaio" "Osasco" 4
+"Com. Sampaio" "Quitaúna" 4
+"Gen. Miguel Costa" "Quitaúna" 4
+"Carapicuíba" "Gen. Miguel Costa" 4
+"Carapicuíba" "Santa Terezinha" 4
+"Antonio João" "Santa Terezinha" 4
+"Antonio João" "Barueri" 4
+"Barueri" "Jd. Belval" 4
+"Jd. Belval" "Jd. Silveira" 4
+"Jandira" "Jd. Silveira" 4
+"Jandira" "Sagrado Coração" 4
+"Engº Cardoso" "Sagrado Coração" 4
+"Engº Cardoso" "Itapevi" 4
+"Corinthians - Itaquera" "Dom Bosco" 4
+"Dom Bosco" "José Bonifácio" 4
+"Guianases" "José Bonifácio" 4
+"Antonio Gianetti Neto" "Guianases" 4
+"Antonio Gianetti Neto" "Ferraz de Vasconcelos" 4
+"Ferraz de Vasconcelos" "Poá" 4
+"Jundiapeba" "Suzano" 4
+"Braz Cubas" "Jundiapeba" 4
+"Braz Cubas" "Mogi das Cruzes" 4
+"Estudantes" "Mogi das Cruzes" 4
+"Calmon Viana" "Poá" 4
+"Calmon Viana" "Suzano" 4
+"Aeroporto - Guarulhos" "Guarulhos - Cecap" 2
+"Engº Goulart" "Guarulhos - Cecap" 2
+"Brás" "Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo " 250
+"Corinthians - Itaquera" "Hospital Mun. Prof. Dr. Waldomiro de Paula" 47
+"Hospital Municipal Tide Setubal - São Miguel" "São Miguel Paulista" 15
+"Hospital Maternidade De Vila Nova Cachoeirinha" "Palmeiras - Barra Funda" 105
+"Hospital Municipal Dr José Soares Hungria - Pirituba" "Pirituba" 8
+"Butantã" "Hospital Municipal e Maternidade Prof. Mario Degni" 103
+"Hospital Municipal Dr. Ignácio Proença de Gouvêa" "Vila Prudente" 25
+"Carrão" "Hospital Municipal do Tatuapé - Dr. Cármino Caricchio" 7
+"Hospital Municipal Doutor Alexandre Zaio" "Patriarca - Vila Ré" 25
+"Hospital Municipal Dr. Benedicto Montenegro" "Vila União" 25
+"Campo Limpo" "Hospital Mun. do Campo Limpo Dr. Fernando Mauro Pires da Rocha Pronto Atendimento" 18
+"Hospital Municipal da Bela Vista - Santa Dulce dos Pobres" "Trianon - MASP" 10
+"Hospital Municipal Infantil Menino Jesus" "Trianon - MASP" 15
+"Guianases" "Hospital Municipal Cidade Tiradentes" 105
+"Hospital Municipal de Brasilândia Adib Jatene" "Lapa" 97
+"Hospital Mun. Ver. José Storopolli" "Penha" 50
+"Hospital Municipal Sorocabana" "Lapa - Senac" 10
+"Grajaú" "Hospital Municipal Capela do Socorro" 37
+"Capão Redondo" "Hospital M'Boi Mirim" 60
+"Hospital Municipal de Guarapiranga" "Santo Amaro" 125
+"Hospital Municipal Josanias Castanha Braga - Parelheiros" "Varginha" 130
+"Hospital Municipal Gilson de Cássia Marques de Carvalho" "Jabaquara" 30
+"Hospital São Luíz Gonzaga São Paulo" "Tucuruvi" 48
+"Hospital Amparo Maternal" "Santa Cruz" 10
+"Hospital do Servidor Público Municipal de São Paulo" "Vergueiro" 5
