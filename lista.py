@@ -83,8 +83,17 @@ class TGrafo:
         print("\nVértice adicionado.")
 
     def addAresta(self, aresta):
-        if aresta.origem.nome not in self.vertices or aresta.destino.nome not in self.vertices:
-            print(f"\nErro: vértice '{aresta.origem.nome}' ou '{aresta.destino.nome}' não existe no grafo.")
+        origem_existe = aresta.origem.nome in self.vertices
+        destino_existe = aresta.destino.nome in self.vertices
+        if not origem_existe or not destino_existe:
+            msg = "\nErro: "
+            if not origem_existe and not destino_existe:
+                msg += f"vértices '{aresta.origem.nome}' e '{aresta.destino.nome}' não existem no grafo."
+            elif not origem_existe:
+                msg += f"vértice de origem '{aresta.origem.nome}' não existe no grafo."
+            else:
+                msg += f"vértice de destino '{aresta.destino.nome}' não existe no grafo."
+            print(msg)
             return
         # Adiciona vizinhos
         self.listaAdj[aresta.origem.nome].append(aresta.destino.nome)
