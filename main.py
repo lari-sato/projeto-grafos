@@ -115,6 +115,12 @@ def menuD(g: TGrafo):
             origem = ler_str("Nome do vértice de origem: ")
             destino = ler_str("Nome do vértice de destino: ")
             tempo = ler_int("Peso/tempo da aresta: ")
+            if origem not in g.vertices:
+                print(f"Erro: vértice de origem '{origem}' não existe no grafo.")
+                return
+            if destino not in g.vertices:
+                print(f"Erro: vértice de destino '{destino}' não existe no grafo.")
+                return
             aresta = Aresta(g.vertices[origem], g.vertices[destino], tempo)
             g.addAresta(aresta)
 
