@@ -20,6 +20,9 @@
 # 28/09:2025: Julia: alteração das chamadas de função do grafo
 # para incluir os argumentos
 
+# 29/09/2025: Larissa: arrumar main para que possa manipular o grafo
+# lido a partir do txt
+
 
 ###################################################################################
 
@@ -39,7 +42,8 @@ def ler_str(msg):
         except ValueError:
             print("Entrada inválida. Informe sequência de caracteres (string).")
 
-def menuD(g: TGrafo):
+def menuD():
+    g = TGrafo()  # Inicializa o grafo dentro da função
     MENU = """
 ==================== MENU DO "METRÔSAÚDE": BEM-VINDO(A)! =====================
 1) Leitura de arquivo (grafo.txt).
@@ -60,9 +64,9 @@ def menuD(g: TGrafo):
 
         if op == "1":
             arq = input("\nNome do arquivo (ex.: 'grafo.txt'): ").strip()
-            grafo = gArquivo(arq)
+            g = gArquivo(arq)
             print("\nLista de Adjacência resultante:\n")
-            grafo.mostrar()
+            g.mostrar()
 
         elif op == "2":
             tipo_grafo = 3
@@ -117,10 +121,10 @@ def menuD(g: TGrafo):
             tempo = ler_int("Peso/tempo da aresta: ")
             if origem not in g.vertices:
                 print(f"Erro: vértice de origem '{origem}' não existe no grafo.")
-                return
+                continue
             if destino not in g.vertices:
                 print(f"Erro: vértice de destino '{destino}' não existe no grafo.")
-                return
+                continue
             aresta = Aresta(g.vertices[origem], g.vertices[destino], tempo)
             g.addAresta(aresta)
 
@@ -156,5 +160,4 @@ def menuD(g: TGrafo):
             print("Opção inválida.")
 
 if __name__ == "__main__":
-    g = TGrafo()
-    menuD(g)
+    menuD()
