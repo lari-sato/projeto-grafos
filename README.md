@@ -1,5 +1,18 @@
-# Acessibilidade a Hospitais Públicos via Rede Metroviária
-O projeto tem como objetivo examinar a acessibilidade de hospitais públicos na cidade de São Paulo por meio da rede metroviária, avaliando de que forma o transporte coletivo contribui para aproximar a população dos serviços de saúde. A motivação está na importância do tempo de deslocamento em situações de urgência, quando cada minuto pode impactar a saúde do paciente. Já a justificativa baseia-se no potencial do metrô em reduzir tempos de viagem, ampliar a equidade de acesso e minimizar desigualdades de mobilidade.
+# MetrôSaúde: Acessibilidade a Hospitais Públicos via Rede Metroviária
+A rede metroviária tem o potencial de transportar grandes volumes de pessoas
+com rapidez e regularidade, consolidando-se como um dos meios de transporte
+coletivo mais eficientes em centros urbanos. Integrando essa característica ao
+contexto da saúde pública, nosso projeto busca avaliar de que forma o metrô
+contribui para aproximar a população aos hospitais públicos, reduzindo tempos
+de deslocamento em situações de urgência, promovendo maior equidade no
+atendimento e minimizando desigualdades de mobilidade urbana.
 
-O grafo adotado será do tipo ponderado e não-direcionado, representando os tempos de deslocamento. Os vértices correspondem a hospitais e estações de metrô, enquanto as arestas indicam o tempo de trajeto entre estações e o tempo de caminhada até os hospitais.
-Por fim, o problema central consiste em avaliar a cobertura do transporte metroviário em relação aos hospitais públicos, fornecendo insumos para o planejamento urbano e apontando regiões que poderiam se beneficiar da instalação de novas estações.
+O grafo adotado será do tipo ponderado e não-direcionado. Os vértices podem
+corresponder a estações de metrô/trem ou hospitais, enquanto as arestas
+indicam o tempo de trajeto entre estação-estação, e o tempo entre as estações
+de destino e hospitais (a pé, de carro ou ônibus).
+Por fim, o problema central consiste em avaliar a cobertura do transporte
+metroviário em relação aos hospitais públicos, fornecendo insumos para o
+planejamento urbano e apontando regiões que poderiam se beneficiar da
+instalação de novas estações.
+
