@@ -2,7 +2,7 @@
 
 ---
 
-## 👩‍💻 Equipe
+## Equipe
 - **Julia Santos Oliveira | 10417672**
 - **Larissa Yuri Sato | 10418318**
   
