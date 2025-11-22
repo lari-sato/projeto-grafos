@@ -23,6 +23,8 @@
 # 27/09/2025: Larissa: mudança das funções do grafo para
 # diferenciar tipos de vértice e arestas
 
+# 21/1/2025: Larissa: adição de funções para coloração de vértices, calcular
+# graus dos vértices e verificar se o grafo é Euleriano
 
 ###################################################################################
 
