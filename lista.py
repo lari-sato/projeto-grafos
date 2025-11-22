@@ -67,6 +67,7 @@ class TGrafo:
         self.listaAdj = {}  # {rotulo: [vizinhos]}
         self.m = 0  # Número de arestas
 
+
     def addVert(self, nome, tipo, atributo):
         if nome in self.vertices:
             print(f"\nErro: vértice '{nome}' já existe.")
@@ -81,6 +82,7 @@ class TGrafo:
         self.vertices[nome] = vertice
         self.listaAdj[nome] = []
         print("\nVértice adicionado.")
+
 
     def addAresta(self, aresta):
         origem_existe = aresta.origem.nome in self.vertices
@@ -104,6 +106,7 @@ class TGrafo:
         self.m += 1
         print("\nAresta inserida.")
 
+
     def remVert(self, rotulo):
         if rotulo not in self.vertices:
             print(f"\nErro: vértice '{rotulo}' não existe no grafo.")
@@ -116,6 +119,7 @@ class TGrafo:
         del self.listaAdj[rotulo]
         print("\nVértice removido.")
 
+
     def remAresta(self, rotulo1, rotulo2):
         if rotulo1 not in self.vertices or rotulo2 not in self.vertices:
             print(f"\nErro: vértice '{rotulo1}' ou '{rotulo2}' não existe no grafo.")
@@ -127,6 +131,7 @@ class TGrafo:
             self.listaAdj[rotulo2].remove(rotulo1)
             self.m -= 1
             print("\nAresta removida.")
+
 
     def mostrar(self):
         print(f"\n n: {len(self.listaAdj):2d} m: {self.m:2d}")
@@ -171,6 +176,119 @@ class TGrafo:
             return True
         else:
             return False
+        
+    
+    # -- GRAU DE VÉRTICES ---
+    def degreeND(self, v):
+        grau = len(self.listaAdj[v])           # Conta vizinhos de v
+        if v in self.listaAdj[v]:              # Caso especial: laço em v
+            grau += 1                          # Laço conta como 2
+        return grau
+    
+    
+    # Verifica se o grafo é Euleriano
+    def euleriano(self):
+        soma = 0
+        impares = 0
+        for v in range(self.n):
+            grau = self.degreeND(v)
+            if self.degreeND(v) % 2 != 0:
+                if impares > 2:
+                    return False
+                impares += 1
+            soma += grau
+        if impares % 2 != 0 or (soma != self.m * 2):
+            return False
+        return True
+    
+    
+    # --- COLORAÇÃO DE VÉRTICES ---
+    
+    # Verificação de rótulos numéricos 
+    @staticmethod
+    def ehNumerico(x):
+        if isinstance(x, int): return True
+        if isinstance(x, str) and x.isdigit(): return True
+        return False
+
+
+    # Algoritmo de coloração sequencial
+    def coloracao_seq(self, ordem_vertices):
+        n = self.n
+        classes = []
+        cor = [0]*n
+        viz = [set(self.listaAdj[i]) for i in range(n)]
+
+        for vi in ordem_vertices:
+            k = 1
+            while True:
+                if k > len(classes):
+                    classes.append(set())
+                ok = True
+                for u in classes[k-1]:
+                    if (u in viz[vi]) or (vi in viz[u]): 
+                        ok = False
+                        break
+                if ok:
+                    classes[k-1].add(vi)
+                    cor[vi] = k
+                    break
+                k += 1
+        return cor, classes
+
+
+    # Rerrotulação (no caso de grafo com letras)
+    def reRotulacao(self, labels):
+        houve = any(not self.ehNumerico(x) for x in labels)
+        if not houve:
+            return list(range(self.n)), False
+
+        graus = [(self.grau(i), str(labels[i])) for i in range(self.n)]
+        ordem = sorted(range(self.n), key=lambda i: (-graus[i][0], graus[i][1]))
+
+        print("\n=======================================================")
+        print("Rerrotulação por grau (número de vizinhos):")
+        for rank, idx in enumerate(ordem, start=1):
+            print(f"{labels[idx]}: {rank}")
+        return ordem, True
+
+
+    # Pipeline completo de coloração
+    def colorir(self, labels):
+        # 1) Chama re-rotulação se necessário
+        ordem, houve_letras = self.reRotulacao(labels)
+        if not houve_letras:
+            ordem = list(range(self.n))  # mantém ordem natural
+
+        # 2) Coloração sequencial
+        cores, classes = self.coloracao_seq(ordem)
+        resultado = {str(labels[i]): cores[i] for i in range(self.n)}
+        rank_of_idx = {idx: rank for rank, idx in enumerate(ordem, start=1)}
+
+        # 3) Impressão de resultados
+        print("\n=======================================================")
+        print("Coloração (rótulos originais -> classe de cor):")
+        for lab in sorted(resultado.keys()):
+            print(f"{lab}: {resultado[lab]}")
+        print(f"\nNúmero de cores: {max(cores) if cores else 0}")
+
+        # Sempre imprime classes com números, independente de letras ou não
+        print("\nClasses finais:")
+        for k, Ck in enumerate(classes, start=1):
+            nums = sorted(rank_of_idx[i] for i in Ck)
+            print(f"C{k} = {{{', '.join(map(str, nums))}}}")
+
+        # Imprime classes com LETRAS, somente se o grafo tiver letras
+        if houve_letras:
+            print("\nClasses com as letras originais:")
+            for k, Ck in enumerate(classes, start=1):
+                lets = sorted(labels[i] for i in Ck)
+                print(f"C{k} = {{{', '.join(lets)}}}")
+
+        print("=======================================================\n")
+        return resultado
+    
+    
 
 # --- LEITURA DE GRAFO A PARTIR DE ARQUIVO ---
 def gArquivo(arquivo):
