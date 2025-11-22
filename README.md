@@ -13,7 +13,7 @@
 ### O Problema 
 A mobilidade urbana e o acesso equitativo aos serviços públicos de saúde continuam sendo desafios significativos nas grandes cidades brasileiras. Embora a rede metropolitana de transporte (metrô e CPTM) possua grande capacidade de transportar pessoas com rapidez e regularidade, ainda existem regiões onde a população enfrenta dificuldades para alcançar hospitais públicos de forma eficiente, especialmente em situações de urgência. Essa limitação contribui para desigualdades no atendimento, ampliando barreiras sociais e geográficas.
 
-Esse cenário está diretamente associado a dois Objetivos de Desenvolvimento Sustentável:
+Esse cenário está diretamente associado a dois [Objetivos de Desenvolvimento Sustentável da ONU](https://www.unicef.org/brazil/objetivos-de-desenvolvimento-sustentavel):
 
 - **Saúde e Bem-Estar (ODS 3)**, pois o acesso rápido e igualitário aos hospitais influencia a qualidade de vida, reduz mortalidade em emergências e garante atendimento ágil.
 - **Cidades e Comunidades Sustentáveis (ODS 11)**, já que a integração entre transporte coletivo e infraestrutura de saúde é essencial para um planejamento urbano inclusivo, sustentável e capaz de reduzir desigualdades territoriais.
@@ -120,7 +120,7 @@ Nossa aplicação oferece um conjunto de funcionalidades que permitem ao usuári
 - **Encerrar Execução**  
   Finaliza a aplicação de forma segura.
 
-### 🗺️ Interface Proposta
+### Interface Proposta
 - **Protótipo no Figma:**  
   [Figma – Projeto IHC/Grafos](https://www.figma.com/design/KiJJ8dxm0PF48l1yWeD62W/Projeto---IHC---Grafos?node-id=31-911)
 
