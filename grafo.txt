@@ -297,6 +297,7 @@
 "Butantã" "São Paulo - Morumbi" 2
 "São Paulo - Morumbi" "Vila Sônia" 2
 "AACD - Servidor" "Hospital São Paulo" 2
+"Hospital São Paulo" "Santa Cruz" 2
 "AACD - Servidor" "Moema" 2
 "Eucaliptos" "Moema" 2
 "Campo Belo" "Eucaliptos" 2
@@ -384,7 +385,6 @@
 "Engº Goulart" "Guarulhos - Cecap" 11
 "Hospital Cantareira" "Tucuruvi" 23 CAMINHADA
 "Hospital Municipal Dr. Arthur Ribeiro de Saboya" "Jabaquara" 12 CAMINHADA
-"Hospital São Paulo" "Santa Cruz" 2 CAMINHADA
 "Brás" "Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo " 250 CAMINHADA
 "Corinthians - Itaquera" "Hospital Mun. Prof. Dr. Waldomiro de Paula" 47 CAMINHADA
 "Hospital Municipal Tide Setubal - São Miguel" "São Miguel Paulista" 15 CAMINHADA
