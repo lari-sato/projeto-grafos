@@ -158,6 +158,38 @@ class TGrafo:
                     vizinhos_str.append(f"({vizinho}, ?)")
             print(f"{rotulo}: {' '.join(vizinhos_str)}")
         print("\nFim da impressão.")
+    
+    
+    def listar_hospitais_por_menor_aresta_modo(self, modo):
+        hospitais = [v for v in self.vertices.values() if isinstance(v, Hospital)]
+        lista = []
+        for hosp in hospitais:
+            tempos = [
+                aresta.tempo
+                for aresta in hosp.arestas
+                if isinstance(aresta, Est_Hosp) and aresta.modo.lower() == modo.lower()
+            ]
+            if tempos:
+                menor = min(tempos)
+                lista.append((hosp.nome, menor))
+            else:
+                lista.append((hosp.nome, float('inf')))
+        lista.sort(key=lambda x: x[1])
+        print(f"\nHospitais ordenados pelo menor tempo ({modo}):")
+        for nome, t in lista:
+            if t < float('inf'):
+                print(f"{nome}: {t} min")
+            else:
+                print(f"{nome}: não possui aresta do tipo '{modo}'")
+
+
+    def modos_existentes(self):
+        modos = set()
+        for v in self.vertices.values():
+            for aresta in v.arestas:
+                if isinstance(aresta, Est_Hosp):
+                    modos.add(aresta.modo.lower())
+        return sorted(modos)
 
     
     # Verifica se o grafo é conexo utilizando DFS
@@ -307,13 +339,11 @@ def gArquivo(arquivo):
     tipo = int(linhas[0])  # Tipo do grafo
     n = int(linhas[1])     # Número de vértices
 
-    grafo = TGrafo()       # Inicializa grafo vazio
+    grafo = TGrafo()
     rotulos = []
 
-    # Adiciona vértices com nome, tipo e atributo (sem índice)
     for i in range(2, 2 + n):
         partes = linhas[i].split('"')
-        # partes: ['', nome, ' ', tipo, ' ', atributo, '']
         nome = partes[1].strip()
         tipo_v = partes[3].strip().upper()
         atributo = partes[5].strip()
@@ -322,14 +352,27 @@ def gArquivo(arquivo):
 
     m = int(linhas[2 + n])  # Número de arestas
 
-    # Adiciona arestas usando nomes
     for i in range(3 + n, 3 + n + m):
         partes = linhas[i].split('"')
-        # partes: ['', nome1, ' ', nome2, ' ', peso, '']
         nome1 = partes[1].strip()
         nome2 = partes[3].strip()
-        peso = int(linhas[i].split()[-1])
-        aresta = Aresta(grafo.vertices[nome1], grafo.vertices[nome2], peso)
+        campos = linhas[i].split()
+        # Se último campo é uma palavra (ex: CAMINHADA), use o penúltimo como peso
+        if campos[-1].isalpha():
+            peso = int(campos[-2])
+            modo = campos[-1]
+            v1 = grafo.vertices[nome1]
+            v2 = grafo.vertices[nome2]
+            aresta = Est_Hosp(v1, v2, peso, modo)
+        else:
+            # Caso padrão: estação-estação
+            peso = int(campos[-1])
+            v1 = grafo.vertices[nome1]
+            v2 = grafo.vertices[nome2]
+            if isinstance(v1, Estacao) and isinstance(v2, Estacao):
+                aresta = Est_Est(v1, v2, peso)
+            else:
+                aresta = Aresta(v1, v2, peso)
         grafo.addAresta(aresta)
-
+        
     return grafo

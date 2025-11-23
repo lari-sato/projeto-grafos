@@ -223,8 +223,6 @@
 "Jardim São Paulo" "Santana" 2
 "Jardim São Paulo" "Parada Inglesa" 2
 "Parada Inglesa" "Tucuruvi" 2
-"Hospital Cantareira" "Tucuruvi" 23
-"Hospital Municipal Dr. Arthur Ribeiro de Saboya" "Jabaquara" 12
 "Luz" "Palmeiras - Barra Funda" 2
 "Júlio Prestes" "Palmeiras - Barra Funda" 2
 "Palmeiras - Barra Funda" "Água Branca" 4
@@ -298,7 +296,6 @@
 "Butantã" "Pinheiros" 2
 "Butantã" "São Paulo - Morumbi" 2
 "São Paulo - Morumbi" "Vila Sônia" 2
-"Hospital São Paulo" "Santa Cruz" 2
 "AACD - Servidor" "Hospital São Paulo" 2
 "AACD - Servidor" "Moema" 2
 "Eucaliptos" "Moema" 2
@@ -385,28 +382,31 @@
 "Calmon Viana" "Suzano" 4
 "Aeroporto - Guarulhos" "Guarulhos - Cecap" 2
 "Engº Goulart" "Guarulhos - Cecap" 2
-"Brás" "Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo " 250
-"Corinthians - Itaquera" "Hospital Mun. Prof. Dr. Waldomiro de Paula" 47
-"Hospital Municipal Tide Setubal - São Miguel" "São Miguel Paulista" 15
-"Hospital Maternidade De Vila Nova Cachoeirinha" "Palmeiras - Barra Funda" 105
-"Hospital Municipal Dr José Soares Hungria - Pirituba" "Pirituba" 8
-"Butantã" "Hospital Municipal e Maternidade Prof. Mario Degni" 103
-"Hospital Municipal Dr. Ignácio Proença de Gouvêa" "Vila Prudente" 25
-"Carrão" "Hospital Municipal do Tatuapé - Dr. Cármino Caricchio" 7
-"Hospital Municipal Doutor Alexandre Zaio" "Patriarca - Vila Ré" 25
-"Hospital Municipal Dr. Benedicto Montenegro" "Vila União" 25
-"Campo Limpo" "Hospital Mun. do Campo Limpo Dr. Fernando Mauro Pires da Rocha Pronto Atendimento" 18
-"Hospital Municipal da Bela Vista - Santa Dulce dos Pobres" "Trianon - MASP" 10
-"Hospital Municipal Infantil Menino Jesus" "Trianon - MASP" 15
-"Guianases" "Hospital Municipal Cidade Tiradentes" 105
-"Hospital Municipal de Brasilândia Adib Jatene" "Lapa" 97
-"Hospital Mun. Ver. José Storopolli" "Penha" 50
-"Hospital Municipal Sorocabana" "Lapa - Senac" 10
-"Grajaú" "Hospital Municipal Capela do Socorro" 37
-"Capão Redondo" "Hospital M'Boi Mirim" 60
-"Hospital Municipal de Guarapiranga" "Santo Amaro" 125
-"Hospital Municipal Josanias Castanha Braga - Parelheiros" "Varginha" 130
-"Hospital Municipal Gilson de Cássia Marques de Carvalho" "Jabaquara" 30
-"Hospital São Luíz Gonzaga São Paulo" "Tucuruvi" 48
-"Hospital Amparo Maternal" "Santa Cruz" 10
-"Hospital do Servidor Público Municipal de São Paulo" "Vergueiro" 5
+"Hospital Cantareira" "Tucuruvi" 23 CAMINHADA
+"Hospital Municipal Dr. Arthur Ribeiro de Saboya" "Jabaquara" 12 CAMINHADA
+"Hospital São Paulo" "Santa Cruz" 2 CAMINHADA
+"Brás" "Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo " 250 CAMINHADA
+"Corinthians - Itaquera" "Hospital Mun. Prof. Dr. Waldomiro de Paula" 47 CAMINHADA
+"Hospital Municipal Tide Setubal - São Miguel" "São Miguel Paulista" 15 CAMINHADA
+"Hospital Maternidade De Vila Nova Cachoeirinha" "Palmeiras - Barra Funda" 105 CAMINHADA
+"Hospital Municipal Dr José Soares Hungria - Pirituba" "Pirituba" 8 CAMINHADA
+"Butantã" "Hospital Municipal e Maternidade Prof. Mario Degni" 103 CAMINHADA
+"Hospital Municipal Dr. Ignácio Proença de Gouvêa" "Vila Prudente" 25 CAMINHADA
+"Carrão" "Hospital Municipal do Tatuapé - Dr. Cármino Caricchio" 7 CAMINHADA
+"Hospital Municipal Doutor Alexandre Zaio" "Patriarca - Vila Ré" 25 CAMINHADA
+"Hospital Municipal Dr. Benedicto Montenegro" "Vila União" 25 CAMINHADA
+"Campo Limpo" "Hospital Mun. do Campo Limpo Dr. Fernando Mauro Pires da Rocha Pronto Atendimento" 18 CAMINHADA
+"Hospital Municipal da Bela Vista - Santa Dulce dos Pobres" "Trianon - MASP" 10 CAMINHADA
+"Hospital Municipal Infantil Menino Jesus" "Trianon - MASP" 15 CAMINHADA
+"Guianases" "Hospital Municipal Cidade Tiradentes" 105 CAMINHADA
+"Hospital Municipal de Brasilândia Adib Jatene" "Lapa" 97 CAMINHADA
+"Hospital Mun. Ver. José Storopolli" "Penha" 50 CAMINHADA
+"Hospital Municipal Sorocabana" "Lapa - Senac" 10 CAMINHADA
+"Grajaú" "Hospital Municipal Capela do Socorro" 37 CAMINHADA
+"Capão Redondo" "Hospital M'Boi Mirim" 60 CAMINHADA
+"Hospital Municipal de Guarapiranga" "Santo Amaro" 125 CAMINHADA
+"Hospital Municipal Josanias Castanha Braga - Parelheiros" "Varginha" 130 CAMINHADA
+"Hospital Municipal Gilson de Cássia Marques de Carvalho" "Jabaquara" 30 CAMINHADA
+"Hospital São Luíz Gonzaga São Paulo" "Tucuruvi" 48 CAMINHADA
+"Hospital Amparo Maternal" "Santa Cruz" 10 CAMINHADA
+"Hospital do Servidor Público Municipal de São Paulo" "Vergueiro" 5 CAMINHADA

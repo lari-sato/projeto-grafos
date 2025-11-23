@@ -63,6 +63,7 @@ def menuD():
 10) Aplicar Coloração Sequencial de Vértices.
 11) Calcular grau dos vértices.
 12) Verificar se o grafo é euleriano.
+13) Listar hospitais por tempo.
  0) Sair
 ==========================================================================
 """
@@ -184,6 +185,21 @@ def menuD():
         elif op == "12":
             if g is not None and len(g.vertices) > 0:
                 print("O grafo é Euleriano." if g.euleriano() else "O grafo não é Euleriano.")
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
+        
+        elif op == "13":
+            if g is not None and len(g.vertices) > 0:
+                    modos = g.modos_existentes()
+                    if not modos:
+                        print("Não há modos de locomoção registrados no grafo (arestas Estação-Hospital).")
+                        continue
+                    print("Modos disponíveis:", ', '.join(modos))
+                    modo = ler_str("Escolha o modo de locomoção exatamente como aparece acima: ").lower()
+                    if modo not in modos:
+                        print("Modo não encontrado. Tente novamente.")
+                        continue
+                    g.listar_hospitais_por_menor_aresta_modo(modo)
             else:
                 print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
