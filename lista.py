@@ -23,8 +23,10 @@
 # 27/09/2025: Larissa: mudança das funções do grafo para
 # diferenciar tipos de vértice e arestas
 
-# 21/1/2025: Larissa: adição de funções para coloração de vértices, calcular
+# 21/11/2025: Larissa: adição de funções para coloração de vértices, calcular
 # graus dos vértices e verificar se o grafo é Euleriano
+
+# 22/11/2025: Larissa: arrumado erros nas funções não compatíveis com dicionário
 
 ###################################################################################
 
@@ -68,6 +70,7 @@ class TGrafo:
         self.vertices = {} # vertices
         self.listaAdj = {}  # {rotulo: [vizinhos]}
         self.m = 0  # Número de arestas
+        self.n = 0  # Número de vértices
 
 
     def addVert(self, nome, tipo, atributo):
@@ -83,6 +86,7 @@ class TGrafo:
             return
         self.vertices[nome] = vertice
         self.listaAdj[nome] = []
+        self.n += 1
         print("\nVértice adicionado.")
 
 
@@ -117,8 +121,10 @@ class TGrafo:
         for vizinho in list(self.listaAdj[rotulo]):
             self.listaAdj[vizinho].remove(rotulo)
             self.m -= 1
-        # Remove o vértice do grafo
+        # Remove o vértice do grafo (lista de adjacência e dicionário de vértices)
         del self.listaAdj[rotulo]
+        del self.vertices[rotulo]
+        self.n -= 1   # atualizar contador de vértices
         print("\nVértice removido.")
 
 
@@ -192,7 +198,7 @@ class TGrafo:
     def euleriano(self):
         soma = 0
         impares = 0
-        for v in range(self.n):
+        for v in self.listaAdj.keys():
             grau = self.degreeND(v)
             if self.degreeND(v) % 2 != 0:
                 if impares > 2:
@@ -205,7 +211,7 @@ class TGrafo:
     
     
     # --- COLORAÇÃO DE VÉRTICES ---
-    
+
     # Verificação de rótulos numéricos 
     @staticmethod
     def ehNumerico(x):
@@ -213,13 +219,13 @@ class TGrafo:
         if isinstance(x, str) and x.isdigit(): return True
         return False
 
-
-    # Algoritmo de coloração sequencial
+    # Algoritmo de coloração sequencial (rótulos)
     def coloracao_seq(self, ordem_vertices):
-        n = self.n
+        # ordem_vertices: lista de rótulos (strings) na ordem desejada
         classes = []
-        cor = [0]*n
-        viz = [set(self.listaAdj[i]) for i in range(n)]
+        cor = {}  # mapa rótulo -> cor
+        # viz: mapa rótulo -> conjunto de vizinhos (rótulos)
+        viz = {label: set(self.listaAdj[label]) for label in ordem_vertices}
 
         for vi in ordem_vertices:
             k = 1
@@ -228,7 +234,7 @@ class TGrafo:
                     classes.append(set())
                 ok = True
                 for u in classes[k-1]:
-                    if (u in viz[vi]) or (vi in viz[u]): 
+                    if u in viz[vi] or vi in viz[u]:
                         ok = False
                         break
                 if ok:
@@ -238,43 +244,44 @@ class TGrafo:
                 k += 1
         return cor, classes
 
-
     # Rerrotulação (no caso de grafo com letras)
     def reRotulacao(self, labels):
         houve = any(not self.ehNumerico(x) for x in labels)
         if not houve:
-            return list(range(self.n)), False
+            # retorna mesma lista de rótulos e sinaliza que não houve letras
+            return labels[:], False
 
-        graus = [(self.grau(i), str(labels[i])) for i in range(self.n)]
-        ordem = sorted(range(self.n), key=lambda i: (-graus[i][0], graus[i][1]))
+        # graus: (grau_do_rotulo, rótulo_str)
+        graus = [(self.degreeND(labels[i]), str(labels[i])) for i in range(len(labels))]
+        ordem_indices = sorted(range(len(labels)), key=lambda i: (-graus[i][0], graus[i][1]))
+        ordem_labels = [labels[i] for i in ordem_indices]
 
         print("\n=======================================================")
         print("Rerrotulação por grau (número de vizinhos):")
-        for rank, idx in enumerate(ordem, start=1):
-            print(f"{labels[idx]}: {rank}")
-        return ordem, True
-
+        for rank, idx_label in enumerate(ordem_labels, start=1):
+            print(f"{idx_label}: {rank}")
+        return ordem_labels, True
 
     # Pipeline completo de coloração
     def colorir(self, labels):
         # 1) Chama re-rotulação se necessário
         ordem, houve_letras = self.reRotulacao(labels)
         if not houve_letras:
-            ordem = list(range(self.n))  # mantém ordem natural
+            ordem = labels[:]  # mantém ordem natural (rótulos)
 
         # 2) Coloração sequencial
         cores, classes = self.coloracao_seq(ordem)
-        resultado = {str(labels[i]): cores[i] for i in range(self.n)}
-        rank_of_idx = {idx: rank for rank, idx in enumerate(ordem, start=1)}
+        resultado = {str(label): cores.get(label, 0) for label in labels}
+        rank_of_idx = {label: rank for rank, label in enumerate(ordem, start=1)}
 
         # 3) Impressão de resultados
         print("\n=======================================================")
         print("Coloração (rótulos originais -> classe de cor):")
         for lab in sorted(resultado.keys()):
             print(f"{lab}: {resultado[lab]}")
-        print(f"\nNúmero de cores: {max(cores) if cores else 0}")
+        print(f"\nNúmero de cores: {max(cores.values()) if cores else 0}")
 
-        # Sempre imprime classes com números, independente de letras ou não
+        # Sempre imprime classes com números (usando ranks da ordem)
         print("\nClasses finais:")
         for k, Ck in enumerate(classes, start=1):
             nums = sorted(rank_of_idx[i] for i in Ck)
@@ -284,7 +291,7 @@ class TGrafo:
         if houve_letras:
             print("\nClasses com as letras originais:")
             for k, Ck in enumerate(classes, start=1):
-                lets = sorted(labels[i] for i in Ck)
+                lets = sorted(Ck)
                 print(f"C{k} = {{{', '.join(lets)}}}")
 
         print("=======================================================\n")

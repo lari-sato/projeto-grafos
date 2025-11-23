@@ -23,6 +23,11 @@
 # 29/09/2025: Larissa: arrumar main para que possa manipular o grafo
 # lido a partir do txt
 
+# 20/11/2025: Larissa: inserir funções de coloração sequencial,
+# cálculo de grau dos vértices e verificação de grafo euleriano
+
+# 21/11/2025: Larissa: verificação de erros para grafo vazio ou não carregado
+
 
 ###################################################################################
 
@@ -46,16 +51,19 @@ def menuD():
     g = TGrafo()  # Inicializa o grafo dentro da função
     MENU = """
 ==================== MENU DO "METRÔSAÚDE": BEM-VINDO(A)! =====================
-1) Leitura de arquivo (grafo.txt).
-2) Gravar dados no arquivo (grafo.txt).
-3) Inserir vértice (Estação ou Hospital).
-4) Inserir aresta.
-5) Remover vértice.
-6) Remover aresta.
-7) Mostrar conteúdo do arquivo.
-8) Mostrar grafo (Lista de Adjacência).
-9) Apresentar conexidade do grafo.
-0) Sair
+ 1) Leitura de arquivo (grafo.txt).
+ 2) Gravar dados no arquivo (grafo.txt).
+ 3) Inserir vértice (Estação ou Hospital).
+ 4) Inserir aresta.
+ 5) Remover vértice.
+ 6) Remover aresta.
+ 7) Mostrar conteúdo do arquivo.
+ 8) Mostrar grafo (Lista de Adjacência).
+ 9) Apresentar conexidade do grafo.
+10) Aplicar Coloração Sequencial de Vértices.
+11) Calcular grau dos vértices.
+12) Verificar se o grafo é euleriano.
+ 0) Sair
 ==========================================================================
 """
     while True:
@@ -148,10 +156,36 @@ def menuD():
                 print(f"Arquivo '{nome_arquivo}' não encontrado.")
 
         elif op == "8":
-            g.mostrar()
+            if g is not None and len(g.vertices) > 0:
+                g.mostrar()
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
         elif op == "9":
-            print("Conexidade:", g.conexidade())
+            if g is not None and len(g.vertices) > 0:
+                print("Conexidade:", g.conexidade())
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
+        
+        elif op == "10":
+            if g is not None and len(g.vertices) > 0:
+                g.colorir(list(g.vertices.keys()))
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
+                       
+        elif op == "11":
+            if g is not None and len(g.vertices) > 0:
+                for vertice in g.vertices.values():
+                    grau = g.degreeND(vertice.nome)
+                    print(f"Grau do vértice '{vertice.nome}': {grau}")
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
+        
+        elif op == "12":
+            if g is not None and len(g.vertices) > 0:
+                print("O grafo é Euleriano." if g.euleriano() else "O grafo não é Euleriano.")
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
         elif op == "0":
             break
