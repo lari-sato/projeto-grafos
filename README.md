@@ -102,7 +102,7 @@ Nossa aplicação oferece um conjunto de funcionalidades que permitem ao usuári
 - **Remover Aresta**  
   Remove a conexão entre dois vértices.
 
-  - **Mostrar Conteúdo de Arquivo**  
+- **Mostrar Conteúdo de Arquivo**  
   Exibe no terminal o conteúdo de um arquivo informado pelo usuário.
 
 - **Exibir Lista de Adjacência**  
