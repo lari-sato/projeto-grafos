@@ -31,7 +31,7 @@
 
 ###################################################################################
 
-from lista import TGrafo, Vertice, Aresta, Estacao, Hospital, gArquivo
+from lista import Est_Est, Est_Hosp, TGrafo, Vertice, Aresta, Estacao, Hospital, gArquivo
 
 def ler_int(msg):
     while True:
@@ -90,27 +90,46 @@ def menuD():
                     atributo = ler_str(f"Especialidade do hospital {nome}: ")
                 else:
                     atributo = ""
-                vertices.append((nome, tipo_v, atributo))
+                vertices.append([nome, tipo_v, atributo])
             m = ler_int("Insira o número de arestas: ")
             arestas = []
             for i in range(m):
                 nome1 = ler_str(f"Nome do vértice de origem da aresta {i+1}: ")
                 nome2 = ler_str(f"Nome do vértice de destino da aresta {i+1}: ")
                 peso = ler_int(f"Peso da aresta {i+1}: ")
-                arestas.append((nome1, nome2, peso))
+                
+                # Encontre o tipo de cada vértice (busca simples na lista)
+                tipo1 = ""
+                tipo2 = ""
+                for vert in vertices:
+                    if vert[0] == nome1:
+                        tipo1 = vert[1]
+                    if vert[0] == nome2:
+                        tipo2 = vert[1]
+                # Decide se precisa do modo de locomoção
+                if (tipo1 == "E" and tipo2 == "H") or (tipo1 == "H" and tipo2 == "E"):
+                    modo = ler_str(f"Modo de locomoção dessa ligação (ex: CAMINHADA, ONIBUS): ")
+                    arestas.append([nome1, nome2, peso, modo])
+                else:
+                    arestas.append([nome1, nome2, peso, None])
+
             nome_arquivo = ler_str("Nome do arquivo para salvar o grafo: ")
             try:
                 with open(nome_arquivo, 'w', encoding='utf-8') as f:
                     f.write(f"{tipo_grafo}\n")
                     f.write(f"{n}\n")
-                    for nome, tipo_v, atributo in vertices:
-                        f.write(f'"{nome}" "{tipo_v}" "{atributo}"\n')
+                    for v in vertices:
+                        f.write(f'"{v[0]}" "{v[1]}" "{v[2]}"\n')
                     f.write(f"{m}\n")
-                    for nome1, nome2, peso in arestas:
-                        f.write(f'"{nome1}" "{nome2}" {peso}\n')
+                    for a in arestas:
+                        if a[3] is not None:
+                            f.write(f'"{a[0]}" "{a[1]}" {a[2]} {a[3]}\n')
+                        else:
+                            f.write(f'"{a[0]}" "{a[1]}" {a[2]}\n')
                 print(f"Grafo salvo em '{nome_arquivo}'.")
             except Exception as e:
                 print(f"Erro ao salvar o arquivo: {e}")
+
 
         elif op == "3":
             tipo = ler_str("O vértice é Estação (E) ou Hospital (H)? ").strip().upper()
@@ -134,8 +153,19 @@ def menuD():
             if destino not in g.vertices:
                 print(f"Erro: vértice de destino '{destino}' não existe no grafo.")
                 continue
-            aresta = Aresta(g.vertices[origem], g.vertices[destino], tempo)
+
+            v1 = g.vertices[origem]
+            v2 = g.vertices[destino]
+
+            if (isinstance(v1, Estacao) and isinstance(v2, Hospital)) or (isinstance(v2, Estacao) and isinstance(v1, Hospital)):
+                modo = ler_str("Modo de locomoção (ex: CAMINHADA, ONIBUS): ")
+                aresta = Est_Hosp(v1, v2, tempo, modo)
+            elif isinstance(v1, Estacao) and isinstance(v2, Estacao):
+                aresta = Est_Est(v1, v2, tempo)
+            else:
+                aresta = Aresta(v1, v2, tempo)
             g.addAresta(aresta)
+
 
         elif op == "5":
             nome = ler_str("Nome do vértice a remover: ")
@@ -204,6 +234,7 @@ def menuD():
                 print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
         elif op == "0":
+            print("Saindo do programa. Até mais!")
             break
 
         else:
