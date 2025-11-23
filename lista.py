@@ -328,6 +328,58 @@ class TGrafo:
 
         print("=======================================================\n")
         return resultado
+
+
+
+    def dijkstra(self, origem_nome, destino_nome):
+        vertices = list(self.vertices.keys())
+        n = len(vertices)
+        # Cria mapeamento índice <-> nome
+        nome_to_ind = {v: i for i, v in enumerate(vertices)}
+        ind_to_nome = {i: v for i, v in enumerate(vertices)}
+        dist = [float('inf')] * n
+        pred = [None] * n
+        visitado = [False] * n
+
+        if origem_nome not in nome_to_ind or destino_nome not in nome_to_ind:
+            return None, None
+
+        origem = nome_to_ind[origem_nome]
+        destino = nome_to_ind[destino_nome]
+        dist[origem] = 0
+
+        for _ in range(n):
+            u = None
+            melhor = float('inf')
+            for v in range(n):
+                if not visitado[v] and dist[v] < melhor:
+                    melhor, u = dist[v], v
+            if u is None:
+                break
+            visitado[u] = True
+            for vizinho_nome in self.listaAdj[ind_to_nome[u]]:
+                v = nome_to_ind[vizinho_nome]
+                peso = None
+                for aresta in self.vertices[ind_to_nome[u]].arestas:
+                    outro = aresta.destino.nome if aresta.origem.nome == ind_to_nome[u] else aresta.origem.nome
+                    if outro == vizinho_nome:
+                        peso = aresta.tempo
+                        break
+                if peso is not None and peso >= 0:
+                    if dist[u] + peso < dist[v]:
+                        dist[v] = dist[u] + peso
+                        pred[v] = u
+        # Reconstruir caminho
+        caminho = []
+        v = destino
+        if dist[destino] == float('inf'):
+            return None, None
+        while v is not None:
+            caminho.append(ind_to_nome[v])
+            v = pred[v]
+        caminho.reverse()
+        return caminho, dist[destino]
+
     
     
 

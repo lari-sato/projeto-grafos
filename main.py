@@ -64,6 +64,7 @@ def menuD():
 11) Calcular grau dos vértices.
 12) Verificar se o grafo é euleriano.
 13) Listar hospitais por tempo.
+14) Encontrar rota entre estação e hospital.
  0) Sair
 ==========================================================================
 """
@@ -232,7 +233,29 @@ def menuD():
                     g.listarHospitais(modo)
             else:
                 print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
+            
+    
+        elif op == "14":
+            if g is not None and len(g.vertices) > 0:
+                origem = ler_str("Nome da estação de origem: ")
+                if origem not in g.vertices or not isinstance(g.vertices[origem], Estacao):
+                    print("Origem inválida. Escolha uma estação existente.")
+                    continue
+                destino = ler_str("Nome do hospital desejado: ")
+                if destino not in g.vertices or not isinstance(g.vertices[destino], Hospital):
+                    print("Destino inválido. Escolha um hospital existente.")
+                    continue
+                caminho, tempo = g.dijkstra(origem, destino)
+                if caminho is None:
+                    print("Não existe caminho entre origem e hospital.")
+                else:
+                    print("Melhor caminho encontrado:")
+                    print(" -> ".join(caminho))
+                    print(f"Tempo total: {tempo} min")
+            else:
+                print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
+            
         elif op == "0":
             print("Saindo do programa. Até mais!")
             break
