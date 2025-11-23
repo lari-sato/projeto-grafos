@@ -91,7 +91,7 @@
 "Butantã" "E" "amarela"
 "São Paulo - Morumbi" "E" "amarela"
 "Vila Sônia" "E" "amarela"
-"Hospital São Paulo" "H" "universitario geral"
+"Hospital São Paulo" "E"
 "AACD - Servidor" "E" "lilas"
 "Moema" "E" "lilas"
 "Eucaliptos" "E" "lilas"
@@ -163,7 +163,7 @@
 "Santa Terezinha" "E" "diamante"
 "Dom Bosco" "E" "coral"
 "José Bonifácio" "E" "coral"
-"Guianases" "E" "coral"
+"Guaianases" "E" "coral"
 "Antonio Gianetti Neto" "E" "coral"
 "Ferraz de Vasconcelos" "E" "coral"
 "Poá" "E" "coral"
@@ -371,8 +371,8 @@
 "Engº Cardoso" "Itapevi" 4
 "Corinthians - Itaquera" "Dom Bosco" 4
 "Dom Bosco" "José Bonifácio" 4
-"Guianases" "José Bonifácio" 4
-"Antonio Gianetti Neto" "Guianases" 4
+"Guaianases" "José Bonifácio" 4
+"Antonio Gianetti Neto" "Guaianases" 4
 "Antonio Gianetti Neto" "Ferraz de Vasconcelos" 4
 "Ferraz de Vasconcelos" "Poá" 4
 "Jundiapeba" "Suzano" 4
@@ -385,7 +385,7 @@
 "Engº Goulart" "Guarulhos - Cecap" 11
 "Hospital Cantareira" "Tucuruvi" 23 CAMINHADA
 "Hospital Municipal Dr. Arthur Ribeiro de Saboya" "Jabaquara" 12 CAMINHADA
-"Brás" "Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo " 250 CAMINHADA
+"Brás" "Hospital Municipal Prof. Alípio Correa Netto - Ermelino Matarazzo" 250 CAMINHADA
 "Corinthians - Itaquera" "Hospital Mun. Prof. Dr. Waldomiro de Paula" 47 CAMINHADA
 "Hospital Municipal Tide Setubal - São Miguel" "São Miguel Paulista" 15 CAMINHADA
 "Hospital Maternidade De Vila Nova Cachoeirinha" "Palmeiras - Barra Funda" 105 CAMINHADA
@@ -398,7 +398,7 @@
 "Campo Limpo" "Hospital Mun. do Campo Limpo Dr. Fernando Mauro Pires da Rocha Pronto Atendimento" 18 CAMINHADA
 "Hospital Municipal da Bela Vista - Santa Dulce dos Pobres" "Trianon - MASP" 10 CAMINHADA
 "Hospital Municipal Infantil Menino Jesus" "Trianon - MASP" 15 CAMINHADA
-"Guianases" "Hospital Municipal Cidade Tiradentes" 105 CAMINHADA
+"Guaianases" "Hospital Municipal Cidade Tiradentes" 105 CAMINHADA
 "Hospital Municipal de Brasilândia Adib Jatene" "Lapa" 97 CAMINHADA
 "Hospital Mun. Ver. José Storopolli" "Penha" 50 CAMINHADA
 "Hospital Municipal Sorocabana" "Lapa - Senac" 10 CAMINHADA
