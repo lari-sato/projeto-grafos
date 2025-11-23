@@ -381,7 +381,7 @@
 "Calmon Viana" "Poá" 4
 "Calmon Viana" "Suzano" 4
 "Aeroporto - Guarulhos" "Guarulhos - Cecap" 2
-"Engº Goulart" "Guarulhos - Cecap" 2
+"Engº Goulart" "Guarulhos - Cecap" 10
 "Hospital Cantareira" "Tucuruvi" 23 CAMINHADA
 "Hospital Municipal Dr. Arthur Ribeiro de Saboya" "Jabaquara" 12 CAMINHADA
 "Hospital São Paulo" "Santa Cruz" 2 CAMINHADA
