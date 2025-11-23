@@ -91,7 +91,7 @@
 "Butantã" "E" "amarela"
 "São Paulo - Morumbi" "E" "amarela"
 "Vila Sônia" "E" "amarela"
-"Hospital São Paulo" "E"
+"Hospital São Paulo" "E" "lilas"
 "AACD - Servidor" "E" "lilas"
 "Moema" "E" "lilas"
 "Eucaliptos" "E" "lilas"
