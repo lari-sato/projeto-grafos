@@ -70,8 +70,9 @@ Para as arestas:
 <img width="953" height="760" alt="image" src="https://github.com/user-attachments/assets/15c3a269-8670-47d0-b72c-3d00a1a928a7" />
 
 
-**Figura 2: Grafo montado no Graph Online**
-<img width="1281" height="572" alt="image" src="https://github.com/user-attachments/assets/dab55995-2a37-4c17-9b0d-aa9671bcf0d1" />
+**Figura 2: Grafo montado no [Graph Online](https://graphonline.top/?graph=bjYimEBTnyuLYmikZZcst)**
+<img width="1270" height="518" alt="image" src="https://github.com/user-attachments/assets/f0c3c223-9925-485e-ae7a-eec3096688a5" />
+
 
 ---
 
@@ -127,5 +128,4 @@ Nossa aplicação oferece um conjunto de funcionalidades que permitem ao usuári
   Finaliza a aplicação de forma segura.
 
 ### Interface Proposta
-- **Protótipo no Figma:**  
-  [Figma – Projeto IHC/Grafos](https://www.figma.com/design/KiJJ8dxm0PF48l1yWeD62W/Projeto---IHC---Grafos?node-id=31-911)
+- **Protótipo no Figma: [Projeto IHC/Grafos](https://www.figma.com/design/KiJJ8dxm0PF48l1yWeD62W/Projeto---IHC---Grafos?node-id=31-911)**
