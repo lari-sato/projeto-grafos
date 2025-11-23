@@ -160,7 +160,7 @@ class TGrafo:
         print("\nFim da impressão.")
     
     
-    def listar_hospitais_por_menor_aresta_modo(self, modo):
+    def listarHospitais(self, modo):
         hospitais = [v for v in self.vertices.values() if isinstance(v, Hospital)]
         lista = []
         for hosp in hospitais:
@@ -183,7 +183,7 @@ class TGrafo:
                 print(f"{nome}: não possui aresta do tipo '{modo}'")
 
 
-    def modos_existentes(self):
+    def modos(self):
         modos = set()
         for v in self.vertices.values():
             for aresta in v.arestas:

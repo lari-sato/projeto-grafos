@@ -190,7 +190,7 @@ def menuD():
         
         elif op == "13":
             if g is not None and len(g.vertices) > 0:
-                    modos = g.modos_existentes()
+                    modos = g.modos()
                     if not modos:
                         print("Não há modos de locomoção registrados no grafo (arestas Estação-Hospital).")
                         continue
@@ -199,7 +199,7 @@ def menuD():
                     if modo not in modos:
                         print("Modo não encontrado. Tente novamente.")
                         continue
-                    g.listar_hospitais_por_menor_aresta_modo(modo)
+                    g.listarHospitais(modo)
             else:
                 print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
