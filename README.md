@@ -117,10 +117,12 @@ Nossa aplicação oferece um conjunto de funcionalidades que permitem ao usuári
 - **Verificar se o Grafo é Euleriano**  
   Avalia se o grafo atende às condições para ser considerado euleriano.
 
+- **Listar Hospitais por Tempo**  
+  Lista os hospitais ordenados pelo menor tempo de deslocamento, considerando um modo de transporte alternativo escolhido.
+
 - **Encerrar Execução**  
   Finaliza a aplicação de forma segura.
 
 ### Interface Proposta
 - **Protótipo no Figma:**  
   [Figma – Projeto IHC/Grafos](https://www.figma.com/design/KiJJ8dxm0PF48l1yWeD62W/Projeto---IHC---Grafos?node-id=31-911)
-
