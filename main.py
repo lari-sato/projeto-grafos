@@ -268,7 +268,12 @@ def menuD():
                 img = mpimg.imread("grafo_mapa.png")
                 plt.imshow(img)
                 plt.axis("off")
-                plt.show()
+                try:
+                    plt.show(block=False)
+                    plt.pause(0.1)
+                except TypeError:
+                    plt.show()
+                print("Imagem visualizada com sucesso.")
 
             except Exception as e:
 
