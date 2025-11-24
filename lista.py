@@ -206,7 +206,6 @@ class TGrafo:
         while pilha:
             atual = pilha.pop()
             if atual not in visitados:
-                print(f"Visitando: {atual}")
                 visitados.append(atual)
                 for vizinho in self.listaAdj[atual]:
                     if vizinho not in visitados:
