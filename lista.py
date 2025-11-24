@@ -28,9 +28,14 @@
 
 # 22/11/2025: Larissa: arrumado erros nas funções não compatíveis com dicionário
 
+# 23/11/2025: Larissa: adição da função de Dijkstra para encontrar rota entre
+# estação e hospital, adição da função para listar hospitais por tempo
+
+# 23/11/2025: Julia: upload de grafo_mapa.png, adição de comentários com separadores para melhor organização do código
+
 ###################################################################################
 
-
+# --- CLASSES DE VÉRTICES E ARESTAS ---
 class Vertice:
     def __init__(self, nome):
         self.nome = nome
@@ -72,7 +77,7 @@ class TGrafo:
         self.m = 0  # Número de arestas
         self.n = 0  # Número de vértices
 
-
+    # --- INSERIR VÉRTICE ---
     def addVert(self, nome, tipo, atributo):
         if nome in self.vertices:
             print(f"\nErro: vértice '{nome}' já existe.")
@@ -89,7 +94,7 @@ class TGrafo:
         self.n += 1
         print("\nVértice adicionado.")
 
-
+    # --- INSERIR ARESTA ---
     def addAresta(self, aresta):
         origem_existe = aresta.origem.nome in self.vertices
         destino_existe = aresta.destino.nome in self.vertices
@@ -112,7 +117,7 @@ class TGrafo:
         self.m += 1
         print("\nAresta inserida.")
 
-
+    # --- REMOVER VÉRTICE ---
     def remVert(self, rotulo):
         if rotulo not in self.vertices:
             print(f"\nErro: vértice '{rotulo}' não existe no grafo.")
@@ -127,7 +132,7 @@ class TGrafo:
         self.n -= 1   # atualizar contador de vértices
         print("\nVértice removido.")
 
-
+    # --- REMOVER ARESTA ---
     def remAresta(self, rotulo1, rotulo2):
         if rotulo1 not in self.vertices or rotulo2 not in self.vertices:
             print(f"\nErro: vértice '{rotulo1}' ou '{rotulo2}' não existe no grafo.")
@@ -140,7 +145,7 @@ class TGrafo:
             self.m -= 1
             print("\nAresta removida.")
 
-
+    # --- MOSTRAR GRAFO ---
     def mostrar(self):
         print(f"\n n: {len(self.listaAdj):2d} m: {self.m:2d}")
         for rotulo, vizinhos in self.listaAdj.items():
@@ -159,7 +164,7 @@ class TGrafo:
             print(f"{rotulo}: {' '.join(vizinhos_str)}")
         print("\nFim da impressão.")
     
-    
+    # --- LISTAR HOSPITAIS POR TEMPO ---
     def listarHospitais(self, modo):
         hospitais = [v for v in self.vertices.values() if isinstance(v, Hospital)]
         lista = []
@@ -182,7 +187,7 @@ class TGrafo:
             else:
                 print(f"{nome}: não possui aresta do tipo '{modo}'")
 
-
+    # --- LISTAR MODOS DE TRANSPORTE ---
     def modos(self):
         modos = set()
         for v in self.vertices.values():
@@ -192,7 +197,7 @@ class TGrafo:
         return sorted(modos)
 
     
-    # Verifica se o grafo é conexo utilizando DFS
+    # --- CONEXIDADE ---
     def conexidade(self, rotuloInicio=None):
         if not self.listaAdj:
             print("Grafo vazio.")
@@ -217,7 +222,7 @@ class TGrafo:
             return False
         
     
-    # -- GRAU DE VÉRTICES ---
+    # --- GRAU DE VÉRTICES ---
     def degreeND(self, v):
         grau = len(self.listaAdj[v])           # Conta vizinhos de v
         if v in self.listaAdj[v]:              # Caso especial: laço em v
@@ -225,7 +230,7 @@ class TGrafo:
         return grau
     
     
-    # Verifica se o grafo é Euleriano
+    # --- VERIFICAÇÃO GRAFO EULERIANO ---
     def euleriano(self):
         soma = 0
         impares = 0
@@ -242,7 +247,6 @@ class TGrafo:
     
     
     # --- COLORAÇÃO DE VÉRTICES ---
-
     # Verificação de rótulos numéricos 
     @staticmethod
     def ehNumerico(x):
@@ -328,8 +332,7 @@ class TGrafo:
         print("=======================================================\n")
         return resultado
 
-
-
+    # --- DIJKSTRA ENTRE ESTAÇÃO E HOSPITAL ---
     def dijkstra(self, origem_nome, destino_nome):
         vertices = list(self.vertices.keys())
         n = len(vertices)
@@ -378,9 +381,6 @@ class TGrafo:
             v = pred[v]
         caminho.reverse()
         return caminho, dist[destino]
-
-    
-    
 
 # --- LEITURA DE GRAFO A PARTIR DE ARQUIVO ---
 def gArquivo(arquivo):

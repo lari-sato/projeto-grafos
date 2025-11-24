@@ -24,15 +24,22 @@
 # lido a partir do txt
 
 # 20/11/2025: Larissa: inserir funções de coloração sequencial,
-# cálculo de grau dos vértices e verificação de grafo euleriano
+# cálculo de grau dos vértices e verificação de grafo euleriano no menu
 
 # 21/11/2025: Larissa: verificação de erros para grafo vazio ou não carregado
 
+# 23/11/2025: Larissa: atualização do menu para incluir as novas funcionalidades
+# (listar hospitais por tempo e encontrar rota entre estação e hospital)
+
+# 23//11/2025: Julia: atualização do menu para incluir função de visualização da imagem PNG do grafo, adição de comentários para melhor organização, atualização do README.md 
 
 ###################################################################################
 
 from lista import Est_Est, Est_Hosp, TGrafo, Vertice, Aresta, Estacao, Hospital, gArquivo
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
+#--- FUNÇÕES DE LEITURA DE INTEIRO E STRING ---
 def ler_int(msg):
     while True:
         try:
@@ -64,7 +71,8 @@ def menuD():
 11) Calcular grau dos vértices.
 12) Verificar se o grafo é euleriano.
 13) Listar hospitais por tempo.
-14) Encontrar rota entre estação e hospital.
+14) Encontrar rota entre estação e hospital (Dijkstra).
+15) Visualizar imagem PNG do arquivo (grafo.txt), montado na ferramenta Graph Online.
  0) Sair
 ==========================================================================
 """
@@ -255,7 +263,17 @@ def menuD():
             else:
                 print("Grafo não carregado ou vazio. Use a opção 1 para carregar um grafo.")
 
-            
+        elif op == "15":
+            try:
+                img = mpimg.imread("grafo_mapa.png")
+                plt.imshow(img)
+                plt.axis("off")
+                plt.show()
+
+            except Exception as e:
+
+                print(f"Erro ao carregar a imagem: {e}")
+
         elif op == "0":
             print("Saindo do programa. Até mais!")
             break

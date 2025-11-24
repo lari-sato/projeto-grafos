@@ -124,6 +124,12 @@ Nossa aplicação oferece um conjunto de funcionalidades que permitem ao usuári
 - **Listar Hospitais por Tempo**  
   Lista os hospitais ordenados pelo menor tempo de deslocamento, considerando um modo de transporte alternativo escolhido.
 
+- **Encontrar Rota entre Estação e Hospital (Dijkstra)**  
+  Calcula o caminho mais curto e o tempo total entre uma estação e um hospital.
+
+- **Visualizar Grafo em PNG**  
+  Gera uma imagem PNG com vértices e arestas do grafo, montado no [Graph Online](https://graphonline.top/?graph=bjYimEBTnyuLYmikZZcst).
+
 - **Encerrar Execução**  
   Finaliza a aplicação de forma segura.
 
